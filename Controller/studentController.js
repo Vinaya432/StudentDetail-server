@@ -9,7 +9,7 @@ exports.register= async (req,res)=>{
             const existingUser = await students.findOne({email})
             // console.log(existingUser);
             if(existingUser){
-                res.status(406).json("Student already registered!! Please login")
+                res.status(406).json("Student already registered!!")
 
             }else{
                 const newUser= new students({
